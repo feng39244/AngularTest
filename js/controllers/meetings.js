@@ -20,8 +20,7 @@ myApp.controller('MeetingsController',
           $rootScope.howManyMeetings = meetingsInfo.length;
         });
 
-
-        $scope.addMeeting = function() {
+		  $scope.addMeeting = function() {
           meetingsInfo.$add({
             name: $scope.meetingname,
             date: Firebase.ServerValue.TIMESTAMP
