@@ -41,6 +41,15 @@ myApp.config(['$routeProvider', function($routeProvider) {
         } //current Auth
       } //resolve
     }).
+  when('/appointments', {
+      templateUrl: 'views/appointments.html',
+      controller: 'AppointmentController',
+      resolve: {
+        currentAuth: function(Authentication) {
+          return Authentication.requireAuth();
+        } //current Auth
+      } //resolve
+    }).
     otherwise({
       redirectTo: '/login'
     });
